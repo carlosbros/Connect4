@@ -3,11 +3,6 @@ CIS 120 Game Project
 PennKey: cbros
 =:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=
 
-** In my original game proposal, I said I was going to implement
-   checkers, but I decided to change my game to Connect4, so at
-   the bottom of this README.txt I have written the concepts that
-   I have used when implementing the game. **
-
 =================
 =: Game README :=
 =================
@@ -78,60 +73,4 @@ PennKey: cbros
    * Bottom panel: this panel just contains two buttons, the first one opens
                    a window that lets player 1 change its nickname, and the 
                    second does the same for player 2.
-  
-  
-
-====================
-=: 1-Core Concept :=
-====================
-
-Concept 1: 2D arrays
-
-- Specific feature of the game that uses this concept:
-The board of the game is a 2D array of JButtons.
-
-- Why does it make sense to implement this feature with this concept?
-It makes sense because in this way, a player can click on any JButton to
-add tokens to the board. It also makes easier the task of checking if a game 
-has finished, because with a 2D array it's possible to check every single cell. 
-
-
-====================
-=: 2-Core Concept :=
-====================
-
-Concept 2: Use of I/O 
-
-- Specific feature of the game that uses this concept:
-High scores.
-
-- Why does it make sense to implement this feature with this concept?
-Because having a text file with the high scores is the best way of maintaining
-a high score board across all instances of the Game class. By using I/O, it's
-possible to read and write scores to the high scores file, and if the game is
-closed, the scores are saved in the file.
-
-
-====================
-=: 3-Core Concept :=
-====================
-
-Concept 3: JUnit testing
-
-- Features of the game tested:
-Nearly every class is tested: for invalid inputs, to check if valid inputs
-return the desired results, etc.
-
-
-====================
-=: 4-Game Concept :=
-====================
-
-Concept 4: Complex Game State
-
-- Specific feature of the game that uses this concept:
-Checking if a game has finished is complex. The Game class must check for
-horizontal, vertical or diagonal wins, and also must check if the whole
-board is full, meaning that there is a tie. All of this requires a complex
-search through the 2D array that represents the board.
 
